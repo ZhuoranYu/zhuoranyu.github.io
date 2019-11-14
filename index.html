@@ -121,6 +121,19 @@
 
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/sst.png" alt="b3do" width="200" height="150" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <papertitle>Spatial Synchronized Training</papertitle>
+              <br>
+              <p>
+                 Modern CNN classifiers trained on specific size of images can only do well in the same size of images when testing. The project tackles the catastrophic accuracy drop when testing images have different spatial scales as training ones. Our novel training scheme Spatial Synchronized Training(SST) makes networks more robust to scale variance of inputs and improves accuracy of networks when testing with all scales. The regime is composed by three phases: sampling phase, forwarding phase, and synchronizing phase. Stay tuned for the release of paper!
+              </p>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
               <img src="images/lra.png" alt="safs_small" width="220" height="160" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
@@ -137,11 +150,11 @@
               <img src="images/senseKitchen.jpg" alt="b3do" width="200" height="150" style="border-style: none">
             </td>
             <td width="75%" valign="middle">
-              <papertitle>Multi-View Sparse Human Detection for Food Safety</papertitle>
+              <papertitle>SenseKitchen: Anomaly Detection in Kitchen for Food Safety Guard</papertitle>
               <br>
               <p>
-                The main objective of this project is to build a detector which detects if dressings of chiefs match the requirement of food safety standard in kitchens.
-                My obligation is to provide object detection solutions to efficiently detect human heads and bodys captured by real-world cameras.
+                The main objective of this project is to build a detector which detects anomaly behavior of chiefs in kitchens. Algorithmic solution is composed by two phases: object detection which detects human heads and body and classification which classifys if the behavior is anomalous. 
+                In the latest release, object solution phase achieves 5-times faster inference than previous releases and all associated computation can be done one client device. 
               </p>
             </td>
           </tr>
