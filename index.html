@@ -8,7 +8,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-129068232-1');
 </script>    
 <title>Zhuoran Yu</title>
@@ -18,6 +17,68 @@
 <link type="text/css" rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 <link rel="icon" type="image/png" href="./images/y.png">
+
+<!-- ✨ Highlight box styles -->
+<style>
+  .highlight-box{
+    --bg1:#f5fff8;
+    --bg2:#ffffff;
+    --border:rgba(0,0,0,.08);
+    --text:#0b3b2e;
+    --muted:#335b4f;
+    --chip:#e6f8ef;
+    --chip-text:#0b3b2e;
+    --shadow:0 12px 30px rgba(16,185,129,.18);
+    display:block;
+    margin: 18px auto 24px;
+    padding: 16px 18px;
+    max-width: 960px;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:linear-gradient(180deg,var(--bg1),var(--bg2));
+    box-shadow:var(--shadow);
+    font-family: Lato, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .highlight-box .row{
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  }
+  .highlight-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background: var(--chip);
+    color: var(--chip-text);
+    padding:6px 10px; border-radius:999px; font-weight:700; font-size:12px; letter-spacing:.3px;
+  }
+  .highlight-badge .dot{
+    width:10px; height:10px; border-radius:50%; background:#2f855a; box-shadow:0 0 0 3px rgba(46,204,113,.15);
+  }
+  .highlight-title{
+    margin:0; font-size:18px; font-weight:800; color:var(--text);
+  }
+  .highlight-desc{
+    margin:6px 0 0; color:var(--muted); line-height:1.55; font-size:15px;
+  }
+  .highlight-actions{
+    display:flex; gap:10px; flex-wrap:wrap; margin-left:auto;
+  }
+  .btn{
+    display:inline-block; padding:8px 12px; border-radius:10px; text-decoration:none; font-weight:700; font-size:14px;
+    border:1px solid rgba(0,0,0,.08);
+    transition:transform .06s ease, box-shadow .06s ease, background .06s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.08); }
+  .btn.primary{ background:#10b981; color:#fff; border-color:#0ea371; }
+  .btn.ghost{ background:#ffffff; color:#0b3b2e; }
+  .tagline{ font-weight:700; color:#065f46; }
+  @media (prefers-color-scheme: dark){
+    .highlight-box{
+      --bg1:#0c1a16; --bg2:#0b1323; --border:rgba(255,255,255,.12);
+      --text:#e8fff6; --muted:#c2ffe5; --chip:#0f2a22; --chip-text:#afffe0;
+      --shadow:0 14px 32px rgba(16,185,129,.25);
+      border-color:var(--border);
+    }
+    .btn.ghost{ background:#0f172a; color:#e6fffa; border-color:rgba(255,255,255,.14); }
+  }
+</style>
 </head>
 
 <!-- BODY -->
@@ -35,30 +96,17 @@
             <hr style="margin-top:1.1em; visibility:hidden;" />
             <h2><a href="">zhuoran.yu (at) wisc (dot) edu</a></h2>
             <hr style="margin-top:0.2em; visibility:hidden;" />
-                    <a href="cv_zhuoranyu.pdf">Curriculum Vitae</a>
-                    <a href="">|</a>
-                    <a href="https://www.linkedin.com/in/zhuoranyu/">LinkedIn</a>
-                    <a href="">|</a>
-                    <a href="https://scholar.google.com/citations?user=txxhxREAAAAJ&hl=en">Google Scholar</a>
+            <a href="https://scholar.google.com/citations?user=txxhxREAAAAJ&hl=en">Google Scholar</a>
         </div>
 
         <div class="clear"></div></br>
-
-        <!-- <center>                                                                                    -->
-        <!--     Jump to: &nbsp;                                                                         -->
-        <!--     [<a href="https://xumingze0308.github.io/#biography">Biography</a>]                     -->
-        <!--     [<a href="https://xumingze0308.github.io/#publications">Selected Publications</a>]      -->
-        <!--     [<a href="https://xumingze0308.github.io/#research_experience">Research Experience</a>] -->
-        <!--     [<a href="https://xumingze0308.github.io/#teaching_experience">Teaching Experience</a>] -->
-        <!--     [<a href="https://xumingze0308.github.io/#service">Service</a>]                         -->
-        <!-- </center>                                                                                   -->
     </div>
 
     <div id="mainArea" class="quickFade delayFive">   
 
         <section>
             <article>
-                <div class="sectionTitle", id="self">
+                <div class="sectionTitle" id="self">
                     <h1>About Me</h1>
                 </div>
                 <div class="sectionContent">
@@ -69,145 +117,189 @@
                     I am generally interested in data-centric approaches to improve computer vision models and multimodal LLMs. I am also interested in curating datasets in specific ways
                     to unveil the "mystery" of multimodal LLM.
                     </p> 
-
                 </div>
-                    
             </article>
             <div class="clear"></div>
         </section>
 
+        <!-- 简洁红色高亮 box -->
+        <div class="highlight-box">
+            I am currently exploring full-time opportunities as a Research Scientist starting in Jan 2026.  
+            If you think my background might be a good fit, please feel free to reach out at <strong>zhuoran.yu@wisc.edu</strong>.
+        </div>
+        
+        <style>
+            .highlight-box {
+            margin: 16px 0 24px;
+            padding: 14px 18px;
+            background: #f8fbff;            /* 浅色背景 */
+            border-left: 5px solid #2e8b57; /* 左边竖条 */
+            color: red;                     /* 红色文字 */
+            font: 16px/1.5 system-ui, sans-serif;
+            }
+            .highlight-box strong {
+            color: red; font-weight: 700;
+            }
+            @media (prefers-color-scheme: dark){
+            .highlight-box {
+                background:#1a1f2b;
+                border-left-color:#3ba375;
+                color:#ff6b6b;
+            }
+            .highlight-box strong { color:#ff6b6b; }
+            }
+        </style>
+
         <section>
-      <div class="sectionTitle", id="publications">
-                    <h1>Publications</h1>
+          <div class="sectionTitle" id="publications">
+            <h1>Publications</h1>
+          </div>
+          <article>
+            <div class="sectionContent"></div>
+            <div class="sectionContent">
+              <ul>
+                <li style="margin-bottom:10px">
+                  <p><a href="https://arxiv.org/abs/2501.11899">How Multimodal LLMs Solve Image Tasks: A Lens on Visual Grounding, Task Reasoning, and Answer Decoding</a>
+                  </br>
+                  <b>Zhuoran Yu</b>, Yong Jae Lee
+                  </br>
+                  Conference on Language Modeling (<strong>COLM</strong>), 2025
+                  <br>
+                  [<a href="https://www.arxiv.org/abs/2508.20279">arxiv</a>]
+                  </br>
+                </li>
+                <li style="margin-bottom:10px">
+                  <p><a href="https://arxiv.org/abs/2501.11899">LASER: Lip Landmark Assisted Speaker Detection for Robustness</a>
+                  </br>
+                  Le Thien Phuc Nguyen*, <b>Zhuoran Yu</b>*, Yong Jae Lee (* equal contribution)
+                  </br>
+                  IEEE/CVF Winter Conference on Applications of Computer Vision (<strong>WACV</strong>), 2026
+                  <br>
+                  [<a href="https://arxiv.org/abs/2501.11899">arxiv</a>]
+                  [<a href="https://github.com/plnguyen2908/LASER_ASD">code</a>]
+                  </br>
+                </li>
+                <li style="margin-bottom:10px">
+                  <p><a href="https://arxiv.org/abs/2506.08071">CuRe: Cultural Gaps in the Long Tail of Text-to-Image Systems</a>
+                  </br>
+                  Aniket Rege, Zinnia Nie, Mahesh Ramesh, Unmesh Raskar, <b>Zhuoran Yu</b>, Aditya Kusupati*, Yong Jae Lee*, and Ramya Korlakai Vinayak* (* equal advising)
+                  </br>
+                  IEEE/CVF International Conference on Computer Vision (<strong>ICCV</strong>), 2025
+                  <br>
+                  [<a href="https://arxiv.org/abs/2506.08071">arxiv</a>]
+                  [<a href="https://github.com/aniketrege/cure-bench">code</a>]
+                  </br>
+                </li>
+                <li style="margin-bottom:10px">
+                  <p><a href="https://arxiv.org/abs/2312.02253">Diversify, Don't Fine-Tune: Scaling Up Visual Recognition Training with Synthetic Images</a>
+                  </br>
+                  <b>Zhuoran Yu</b>, Chenchen Zhu,  Sean Culatana, Raghuraman Krishnamoorthi, Fanyi Xiao*, Yong Jae Lee* (* equal advising)
+                  </br>
+                  Transactions on Machine Learning Research (<strong>TMLR</strong>), 2025 (<span style="color: red;">Featured Certificate</span>)
+                  <br>
+                  [<a href="https://arxiv.org/abs/2312.02253">arxiv</a>]
+                  [<a href="https://openreview.net/forum?id=YCt8lsIDwA">openreview</a>]
+                  </br>
+                </li>
+                <li style="margin-bottom:10px">
+                  <p><a href="https://arxiv.org/abs/2310.00099">Denoising and Selecting Pseudo-Heatmaps for Semi-Supervised Human Pose Estimation</a>
+                  </br>
+                  <b>Zhuoran Yu*</b>, Manchen Wang*, Yanbei Chen, Paolo Favaro, Davide Modolo
+                  </br>
+                  IEEE/CVF Winter Conference on Applications of Computer Vision (<strong>WACV</strong>), 2024
+                  <br>
+                  [<a href="https://arxiv.org/abs/2310.00099">arxiv</a>]
+                  </br>
+                </li>
+                <li style="margin-bottom:10px">
+                  <p><a href="https://arxiv.org/abs/2303.07269">InPL: Pseudo-labeling the Inliers First for Imbalanced Semi-supervised Learning</a>
+                  </br>
+                  <b>Zhuoran Yu</b>, Yin Li, Yong Jae Lee
+                  </br>
+                  International Conference on Learning Representations (<strong>ICLR</strong>), 2023
+                  <br>
+                  [<a href="https://arxiv.org/abs/2303.07269">arxiv</a>]
+                  [<a href="https://github.com/ZhuoranYu/INPL">code</a>]
+                  </br>
+                </li>
+                <li style="margin-bottom:10px">
+                  <p><a href="https://arxiv.org/abs/2205.05920">Group R-CNN for Weakly Semi-supervised Object Detection with Points</a>
+                  </br>
+                  Shilong Zhang*, <b>Zhuoran Yu</b>*, Liyang Liu*, Xinjiang Wang, Aojun Zhou, Kai Chen (* equal contribution)
+                  </br>
+                  Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2022
+                  <br>
+                  [<a href="https://arxiv.org/abs/2205.05920">arxiv</a>]
+                  [<a href="https://github.com/jshilong/GroupRCNN">code</a>]
+                  </br>
+                </li>
+                <li style="margin-bottom:10px">
+                  <p><a href="https://arxiv.org/abs/2005.03101">Scale-Equalizing Pyramid Convolution for Object Detection</a>
+                  </br>
+                  Xinjiang Wang*, Shilong Zhang*, <b>Zhuoran Yu</b>, Litong Feng, Wayne Zhang (* equal contribution)
+                  </br>
+                  Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2020
+                  <br>
+                  [<a href="https://arxiv.org/abs/2005.03101">arxiv</a>]
+                  [<a href="https://github.com/jshilong/SEPC">code</a>]
+                  </br>
+                </li>
+              </ul>
             </div>
-    
-            <article>
-    <div class="sectionContent">                                                                                                         
-                </div>
-
-                <div class="sectionContent">
-                    <ul>
-                        <li style="margin-bottom:10px">
-                            <p><a href="https://arxiv.org/abs/2312.02253">Diversify, Don't Fine-Tune: Scaling Up Visual Recognition Training with Synthetic Images</strong></a>
-                            </br>
-                            <b>Zhuoran Yu</b>, Chenchen Zhu,  Sean Culatana, Raghuraman Krishnamoorthi, Fanyi Xiao*, Yong Jae Lee* (equal advising)
-                            </br>
-                            Transactions on Machine Learning Research (<strong>TMLR</strong>), 2025 (<span style="color: red;">Featured Certificate</span>)
-                            <br>
-                            [<a href="https://arxiv.org/abs/2312.02253">arxiv</a>]
-                            [<a href="https://openreview.net/forum?id=YCt8lsIDwA">openreview</a>]
-                            </br>
-                        </li>
-
-                        <li style="margin-bottom:10px">
-                            <p><a href="https://arxiv.org/abs/2310.00099">Denoising and Selecting Pseudo-Heatmaps for Semi-Supervised Human Pose Estimation</strong></a>
-                            </br>
-                            <b>Zhuoran Yu*</b>, Manchen Wang*, Yanbei Chen, Paolo Favaro, Davide Modolo
-                            </br>
-                            IEEE/CVF Winter Conference on Applications of Computer Vision (<strong>WACV</strong>), 2024
-                            <br>
-                            [<a href="https://arxiv.org/abs/2310.00099">arxiv</a>]
-                            </br>
-                        </li>
-
-
-                        <li style="margin-bottom:10px">
-                            <p><a href="https://arxiv.org/abs/2303.07269">InPL: Pseudo-labeling the Inliers First for Imbalanced Semi-supervised Learning</strong></a>
-                            </br>
-                            <b>Zhuoran Yu</b>, Yin Li, Yong Jae Lee
-                            </br>
-                            International Conference on Learning Representations (<strong>ICLR</strong>), 2023
-                            <br>
-                            [<a href="https://arxiv.org/abs/2303.07269">arxiv</a>]
-                            [<a href="https://github.com/ZhuoranYu/INPL">code</a>]
-                            </br>
-                        </li>
-
-                        <li style="margin-bottom:10px">
-                            <p><a href="https://arxiv.org/abs/2205.05920">Group R-CNN for Weakly Semi-supervised Object Detection with Points</strong></a>
-                            </br>
-                            Shilong Zhang*, <b>Zhuoran Yu</b>*, Liyang Liu*, Xinjiang Wang, Aojun Zhou, Kai Chen (* equal contribution)
-                            </br>
-                            Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2022
-                            <br>
-                            [<a href="https://arxiv.org/abs/2205.05920">arxiv</a>]
-                            [<a href="https://github.com/jshilong/GroupRCNN">code</a>]
-                            </br>
-                        </li>
-
-                        <li style="margin-bottom:10px">
-                            <p><a href="https://arxiv.org/abs/2005.03101">Scale-Equalizing Pyramid Convolution for Object Detection</strong></a>
-                            </br>
-                            Xinjiang Wang*, Shilong Zhang*, <b>Zhuoran Yu</b>, Litong Feng, Wayne Zhang (* equal contribution)
-                            </br>
-                            Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2020
-                            <br>
-                            [<a href="https://arxiv.org/abs/2005.03101">arxiv</a>]
-                            [<a href="https://github.com/jshilong/SEPC">code</a>]
-
-                            </br>
-                        </li>
-    
-      
-                    </ul>
-                </div>
-            </article>
-            <div class="clear"></div>
+          </article>
+          <div class="clear"></div>
         </section>
 
         <section>
             <article>
-                <div class="sectionTitle", id="experience">
+                <div class="sectionTitle" id="experience">
                     <h1>Experience</h1>
                 </div>
-
                 <div class="sectionContent">
                     <ul>
                         <li style="margin-bottom:10px"><p><b>Research Scientist Intern</b>,
-                            Meta CORE AI (May 2023 - November 2023)</li></p>
+                            IBM Watson Lab (May 2025 - August 2025)</li></p>
+                        <li style="margin-bottom:10px"><p><b>Research Scientist Intern</b>,
+                            Meta FAIR (May 2024 - August 2024)</li></p>
+                        <li style="margin-bottom:10px"><p><b>Research Scientist Intern</b>,
+                            Meta CORE AI (May 2023 - August 2024)</li></p>
                         <li style="margin-bottom:10px"><p><b>Applied Scientist Intern</b>,
                             AWS Rekognition (May 2022 - August 2022)</li></p>
                         <li style="margin-bottom:10px"><p><b>Research Intern</b>,
                             SenseTime (May 2019 - December 2019)</li></p>
                     </ul>
                 </div>
-
             </article>
             <div class="clear"></div>
         </section>
 
         <section>
             <article>
-                <div class="sectionTitle", id="teaching">
+                <div class="sectionTitle" id="teaching">
                     <h1>Teaching</h1>
                 </div>
-
                 <div class="sectionContent">
                     <ul>
                         <li style="margin-bottom:10px"><p><b>Teaching Assistant: CS 354 Intro to Computer Systems</b> (September 2021 - December 2021)</li></p>
                         <li style="margin-bottom:10px"><p><b>Teaching Assistant: CS 7643 Deep Learning</b> (January 2020 - April 2021)</li></p>
                         <li style="margin-bottom:10px"><p><b>Teaching Assistant: CS 7641 Machine Learning</b> (January 2019 - April 2019)</li></p>
-                        
                     </ul>
                 </div>
-
             </article>
             <div class="clear"></div>
         </section>
 
         <section>
             <article>
-                <div class="sectionTitle", id="awards">
+                <div class="sectionTitle" id="awards">
                     <h1>Awards</h1>
                 </div>
-
                 <div class="sectionContent">
                     <ul>
                         <li style="margin-bottom:10px"><p><b>First-year Scholarship</b>, UW-Madison (2021)</li></p>
                         <li style="margin-bottom:10px"><p><b>Arthur Beaumont Memorial Scholarship</b>, University of Waterloo (2018)</li></p>
                     </ul>
                 </div>
-
             </article>
             <div class="clear"></div>
         </section>
